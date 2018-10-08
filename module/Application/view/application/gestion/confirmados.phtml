@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col-md-12 col-sm-12">
+
+        <div class="portlet portlet-default">
+
+            <div class="portlet-header">
+                <h4 class="portlet-title">
+                Contactos Confirmados
+                </h4>
+
+
+            </div> <!-- /.portlet-header -->
+
+            <div class="portlet-body">   
+                
+                <?php if($evento): ?>
+                <div class="alert alert-success">Solo contactos confirmados en el evento id <strong><?php echo $evento->getId(); ?></strong> nombre <strong><?php echo $evento->getNombre(); ?></strong></div>
+
+                <?php endif; ?>
+
+
+                <?php echo $this->RenderCdiGrid($this->grid); ?>
+
+
+            </div> <!-- /.portlet-body -->
+
+        </div> <!-- /.portlet -->
+
+    </div>
+</div>

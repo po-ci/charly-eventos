@@ -1,0 +1,27 @@
+
+    <?php
+    $this->form->prepare();
+    echo $this->form()->openTag($this->form);
+    ?>
+
+       <!--Imprimo el evento-->
+    <?php
+    $element = $this->form->get("modo");
+    ?>
+    <?php echo $this->formElement($element); ?>
+
+
+    <!--Imprimo el Submit-->
+
+        <?php
+        $element = $this->form->get("submit");
+        ?>
+        <?php echo $this->formElement($element); ?>
+
+
+    <?php
+    echo $this->form()->closeTag($form);
+    ?>
+
+
+

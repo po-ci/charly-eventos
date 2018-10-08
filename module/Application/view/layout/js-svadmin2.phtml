@@ -1,0 +1,9 @@
+   <?php 
+   echo $this->headScript()
+
+                ->prependFile($this->basePath() . '/sb-admin-v2/dist/js/sb-admin-2.js')
+                ->prependFile($this->basePath() . '/sb-admin-v2/bower_components/metisMenu/dist/metisMenu.min.js')
+                ->prependFile($this->basePath() . '/sb-admin-v2/bower_components/bootstrap/dist/js/bootstrap.min.js')
+                ->prependFile('http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', 'text/javascript')
+                ;
+        ?>

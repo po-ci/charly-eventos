@@ -1,0 +1,309 @@
+<?php
+$this->headScript()->prependFile($this->basePath() . '/lib/lwtcountdown/js/jquery.lwtCountdown-1.0.js');
+?>
+<?php
+$this->headLink()
+        ->appendStylesheet($this->basePath() . '/lib/lwtcountdown/style/main.css');
+?> 
+
+<br>
+<div class="row" >
+    <div class="e_header box-1 " >
+        <div class="col-lg-8 col-md-8 col-xs-12 e_izq  "  >
+
+            <div class="col-xs-12 e_cover" style="background:url('<?php echo $this->evento->getLugarFlyer()->getImagen(); ?>');    background-repeat: no-repeat;   background-size: 100% 100%;  background-origin: content-box; background-position: center center;">
+                  <div class="col-lg-3 col-md-3 col-xs-12 text-center">
+        <h4 class="cfecha">Fecha: <?php echo $this->evento->getFecha()->format("Y-m-d"); ?></h4> 
+    </div>
+    <div class="col-lg-9 col-md-9 col-xs-12">
+        <div class="" style="">
+            <div id="countdown_dashboard" class="">
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash weeks_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        weeks
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash days_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        days
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash hours_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        hours
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash minutes_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        minutes
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash seconds_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        seconds
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+
+
+            <div class="col-xs-12 e_photos marginTop10">
+                <?php $i = 0; ?>
+                <?php foreach ($this->evento->getLugar()->getFotos() as $foto): ?>
+                    <div class="col-lg-3 col-xs-3" style="padding-left:0; margin-left: 0;">
+                        <a href="#" class="" style="margin-bottom: 0;" onclick="showImg('<?php echo $foto->getImagen(); ?>')">
+                            <img src="<?php echo $foto->getImagen(); ?>" alt="..." class=" img-responsive " />
+                        </a>
+                    </div>
+                    <?php
+                    $i++;
+                    if ($i > 4) {
+                        break;
+                    }
+                    ?>
+                <?php endforeach; ?>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-4 col-xs-12 e_der">
+
+            <div class="col-xs-12 nopadding">
+                <div class="">
+                    <h4><?php echo $this->evento->getLugar()->getNombre(); ?></h4>
+                </div>
+
+                <div class="text-center" >
+                    <h2> IT's Your Birthday</h2>
+                </div>
+
+                <div class="text-center  cprofile">
+                    <?php if ($this->evento->getContacto()): ?>
+                        <img src="http://graph.facebook.com/<?php echo $this->evento->getContacto()->getFacebookId(); ?>/picture?type=large" alt="..." style="width: 100px; height: 100px;" class="img-circle" /><span class="cname"><?php echo $this->evento->getContacto()->getFullname(); ?></span> 
+                    <?php else: ?>
+                        <img src="/img/profile.jpg" alt="..." style="width: 100px; height: 100px;" class="img-circle" /><span class="cname"><?php echo $this->evento->getNombre(); ?></span> 
+                    <?php endif; ?>
+
+                </div>
+
+                <div class="text-center">
+                    <h2>   Celebrate IT</h2>
+
+                </div>
+
+                <div class=""></div>
+            </div>
+
+            <div class="col-xs-12 text-center  bface">
+                <div class="vcenter">
+                    <?php if (!$this->evento->getContacto()): ?>
+                        <a class="btn btn-facebook fa fa-facebook-f" href="<?php echo $this->loginUrl; ?>"> Confirmar con Facebook</a>
+                    <?php else: ?>
+                        
+                    <?php endif; ?>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class=" clearfix"></div>
+<div  class="row marginTop10 box-2 padding5">
+    <div class="col-lg-3 col-md-3 col-xs-12 text-center">
+        <h4 class="cfecha">Fecha: <?php echo $this->evento->getFecha()->format("Y-m-d"); ?></h4> 
+    </div>
+    <div class="col-lg-9 col-md-9 col-xs-12">
+        <div class="" style="">
+            <div id="countdown_dashboard" class="">
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash weeks_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        weeks
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash days_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        days
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash hours_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        hours
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash minutes_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        minutes
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-xs-4">
+                    <div class="dash seconds_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        seconds
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class=" clearfix"></div>
+<div  class="row marginTop10 box-2 padding5">
+    <div class="col-lg-6 col-xs-12  text-center">
+        <h3 class="cfecha">Dirección: <?php echo $this->evento->getLugar()->getDireccion(); ?></h3> 
+    </div>
+    <div class="col-lg-6 col-xs-12 pull-right text-center ">
+        <h3 class="cfecha cursor-pointer"><i class="fa fa-map-marker"></i> Mapa</h3> 
+    </div>
+</div>   
+
+<div class=" clearfix"></div>
+<div  class="row marginTop10 box-2">
+
+    <?php echo $this->evento->getFormato()->getHtml(); ?>
+</div>
+
+
+
+<div class=" clearfix"></div>
+<div  class="row marginTop10 ">
+    <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12  text-center box-2">
+        <h4 class="cfecha cursor-pointer">Invitados</h4> 
+    </div>
+
+    <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12  text-center box-2">
+        <h4 class="cfecha cursor-pointer">Invitados Confirmados</h4> 
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class='modal fade ' id='imgModal'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+
+            <div class='modal-body'>
+                <button type='button' class='close' data-dixsiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+
+                <div id='imgModalContent'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    function showImg(item) {
+        $('#imgModalContent').html("<div class='text-center'><img class='img-responsive' src='" + item + "'  /></div>");
+
+        $('#imgModal').modal('show');
+    }
+
+</script>
+<script language="javascript" type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#countdown_dashboard').countDown({
+            targetDate: {
+                'day': <?php echo $this->evento->getFecha()->format("d"); ?>,
+                'month': <?php echo $this->evento->getFecha()->format("m"); ?>,
+                'year': <?php echo $this->evento->getFecha()->format("Y"); ?>,
+                'hour': 11,
+                'min': 0,
+                'sec': 0
+            }
+        });
+
+    });
+</script>

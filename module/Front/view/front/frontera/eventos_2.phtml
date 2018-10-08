@@ -1,0 +1,381 @@
+<?php
+$this->headScript()->prependFile($this->basePath() . '/lib/lwtcountdown/js/jquery.lwtCountdown-1.0.js');
+?>
+<?php
+$this->headLink()
+        ->appendStylesheet($this->basePath() . '/lib/lwtcountdown/style/main.css');
+?> 
+
+
+
+<div class="clearfix">
+</div>
+
+
+
+<div class="row" >
+    <div class="e_header box-1 " >
+        <div class="col-lg-8 col-md-8 col-xs-12 e_izq  "  >
+
+            <div class="col-xs-12 e_cover nomargin" style="background:url('<?php echo $this->evento->getLugarFlyer()->getImagen(); ?>');    background-repeat: no-repeat;   background-size: 100% 100%;  background-origin: content-box; background-position: center center;">
+               
+
+            </div>
+
+
+            <div class="col-xs-12 e_photos nomargin nopadding">
+                <?php $i = 0; ?>
+                <table class="table table-bordered nopadding nomargin table-responsive table-condensed">
+                    <tr>
+
+                        <?php foreach ($this->evento->getLugar()->getFotos() as $foto): ?>
+                            <td class="nopadding">
+
+                                <a href="#" class="" style="margin-bottom: 0;" onclick="showImg('<?php echo $foto->getImagen(); ?>')">
+                                    <img src="<?php echo $foto->getImagen(); ?>" alt="..." class="nopadding nomargin img-responsive " />
+                                </a>
+                            </td>
+                            <?php
+                            $i++;
+                            if ($i > 4) {
+                                break;
+                            }
+                            ?>
+                        <?php endforeach; ?>
+
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="col-lg-4 col-md-4 col-xs-12 e_der" style="height: 330px;">
+
+
+            <div class="e_birthday nopadding row transparent">
+
+                <div class="text-center col-lg-12 col-xs-12" >
+                    <h1 class="htitle"> IT's Your Birthday</h1>
+                </div>
+
+
+
+                <div class="text-center   col-lg-12 col-xs-12 marginTop10">
+                    <?php if ($this->evento->getContacto()): ?>
+                
+                        <img src="http://graph.facebook.com/<?php echo $this->evento->getContacto()->getFacebookId(); ?>/picture?type=large" alt="..." style="width: 90px; height: 90px;" class="img-circle" />
+                 
+                        <span class="cname "><?php echo $this->evento->getContacto()->getFullname(); ?></span>
+                  
+                    <?php else: ?>
+                        <img src="/img/profile.jpg" alt="..." style="width: 100px; height: 100px;" class="img-circle" /><span class="cname" ><?php echo $this->evento->getNombre(); ?></span> 
+                    <?php endif; ?>
+
+                </div>
+
+                 <div class="text-center col-lg-12 col-xs-12 marginTop10" >
+                    <h2 class="htitle">   Celebrate IT</h2>
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="clearfix">
+</div>
+
+<div class="row container-fluid">
+    <div  class="col-lg-12 col-xs-12 box-2 marginTop30 ">
+   <div  class="col-lg-6 col-xs-6 ">
+                    <h5 class="cdireccion">
+<?php echo $this->translate($this->evento->getFecha()->format("l")); ?> 
+<?php echo $this->translate($this->evento->getFecha()->format("d")); ?> de
+<?php echo $this->translate($this->evento->getFecha()->format("F")); ?> - <?php echo $this->evento->getHorario(); ?> hs</h5> 
+         </div>       
+    </div>
+</div>
+
+
+<div class="clearfix">
+</div>
+
+
+
+<div class="row container-fluid">
+    <div  class="col-lg-12 col-xs-12  marginTop10 box-2">
+  
+            
+            
+            <div  class="col-lg-6 col-xs-6 ">
+                <h5 class="cdireccion"><?php echo $this->evento->getLugar()->getNombre(); ?> - <?php echo $this->evento->getLugar()->getDireccion(); ?></h5>
+ 
+            </div>
+            
+            
+            <div  class="col-lg-6 col-xs-6 ">
+                  <h5 class="cdireccion cursor-pointer pull-right"><i class="fa fa-map-marker"></i> Mapa</h5> 
+        
+            </div>
+
+    </div>
+</div>
+
+
+<div class="clearfix">
+</div>
+
+<div class="row container-fluid">
+    <div  class="col-lg-12 col-xs-12 marginTop10 box-2">
+        <div class=" formato padding5">
+
+
+            <?php echo nl2br($this->evento->getFormato()->getHtml()); ?>
+        </div>
+    </div>
+</div>
+
+<div class="row container-fluid marginTop10">
+
+
+
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center    ">
+        <div class="box-2 padding5" style="overflow: hidden;">
+            <h4 class="cursor-pointer">Invitados</h4> 
+            <div >
+                <table class="table table-bordered table-condensed table-responsive" id="lista_invitados">
+                    <?php if ($this->evento->getInvitados()): ?>
+                        <?php foreach ($this->evento->getInvitados() as $invitado): ?>
+                            <tr>
+                                <td><?php echo $invitado->getNombre(); ?></td>
+                            </tr>
+
+
+
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
+                </table>
+                <div style="overflow: hidden;">
+
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  text-center   ">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  text-center  box-2">
+
+            <h4>Cocktail</h4>
+            <h5 style="color: #444444;">xx</h5>
+
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6  text-center  box-2 ">
+
+            <h4>Disco</h4>
+            <h5 style="color: #444444;">xx</h5>
+
+        </div>
+        <div class="clearfix"></div>
+
+        <div class=" box-2 padding5 marginTop10">
+              <?php echo $this->partial('widget/tipo', array('form' => $this->formTipo)); ?>
+            
+            
+            <a class="btn btn-facebook-p" href="<?php echo $this->loginUrl; ?>"> Confirmar Evento</a>
+        </div>
+
+
+        <div class="box-2 padding5">
+            <h4 class="cursor-pointer">Invitados Confirmados</h4> 
+            <?php if ($this->evento->getConfirmados()): ?>
+                <div class="list-group marginButtom10 container-fluid">
+
+                    <?php foreach ($this->evento->getConfirmados() as $contacto): ?>
+
+                        <a href="http://www.facebook.com/<?php echo $contacto->getFacebookId(); ?>" target="_blank" class="list-group-item text-left col-xs-10 col-xs-offset-1 padding2 ">
+                            <img src="http://graph.facebook.com/<?php echo $contacto->getFacebookId(); ?>/picture?type=large" alt="..." style="width: 40px; height: 40px;" class="img-rounded" />
+                            <span class="cnameInvitado"><?php echo $contacto->getFullname(); ?></span> 
+                        </a>
+
+                    <?php endforeach; ?>
+
+                </div>
+
+            <?php endif; ?>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<div class="row ">
+
+    <div class="col-lg-12 col-md-12 col-xs-12 marginTop30">
+        <div class="box-2 container-fluid padding5" >
+            <div id="countdown_dashboard" >
+
+                <div class="col-lg-3 col-md-3 col-xs-3 ">
+                    <div class="dash days_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        days
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-xs-3">
+                    <div class="dash hours_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        hours
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3 col-md-3 col-xs-3  ">
+                    <div class="dash minutes_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        minutes
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-xs-3 ">
+                    <div class="dash seconds_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="dash_title">
+                        seconds
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row ">
+
+    <div class="col-lg-4 col-md-4 col-xs-12 col-lg-offset-4 col-md-offset-4 marginTop30 box-2 text-center">
+
+        <div>
+            <a class="cursor-pointer" onclick="showConsulta()"><h3>Consultas</h3></a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class='modal fade ' id='imgModal'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+
+            <div class='modal-body'>
+                <button type='button' class='close' data-dixsiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+
+                <div id='imgModalContent'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    function showImg(item) {
+        $('#imgModalContent').html("<div class='text-center'><img class='img-responsive' src='" + item + "'  /></div>");
+
+        $('#imgModal').modal('show');
+    }
+
+    function showConsulta() {
+        
+        $.get('/inter/consulta/<?php echo $this->evento->getId(); ?>')
+                .done(function (data) {
+                           $('#cdiAjaxContent').html(data);
+                });
+                $('#cdiTitle').html("Consulta");
+        $('#cdiModal').modal('show');
+    }
+
+    function submitConsulta() {
+
+        var datastring = $('#Consulta').serialize();
+          $('#cdiAjaxContent').html("<i class='fa fa-cog fa-spin'></i><span> Enviando...</span>");
+        $.post('/inter/consulta', datastring)
+                .done(function (data) {
+                           $('#cdiAjaxContent').html(data);
+                });
+
+    }
+
+
+</script>
+<script language="javascript" type="text/javascript">
+    jQuery(document).ready(function () {
+        $('#countdown_dashboard').countDown({
+            targetDate: {
+                'day': <?php echo $this->evento->getFecha()->format("d"); ?>,
+                'month': <?php echo $this->evento->getFecha()->format("m"); ?>,
+                'year': <?php echo $this->evento->getFecha()->format("Y"); ?>,
+                'hour': <?php echo $this->evento->getHorario(); ?>,
+                'min': 0,
+                'sec': 0
+            },
+            omitWeeks: true
+        });
+
+    });
+</script>

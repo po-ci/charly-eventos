@@ -1,0 +1,30 @@
+<br> 
+<h2>INVITADOS</h2>
+<br> 
+<table class="table table-bordered table-condensed table-responsive" id="lista_invitados">
+                    <tbody>
+                    <tr>
+                          <th class="col-xs-5">ID Evento</th>
+                          <th class="col-xs-5">Cumpleañero</th>
+                          
+                        <th class="col-xs-5">Nombre</th>
+                        <th class="col-xs-5">Celular</th>
+                          <th class="col-xs-5">LINK</th>
+                    </tr>
+</tbody>
+                    <?php if ($this->evento->getInvitados()): ?>
+                        <?php foreach ($this->evento->getInvitados() as $invitado): ?>
+                            <tr>
+                                 <td><?php echo $this->evento->getId(); ?></td>
+                                  <td><?php echo $this->evento->getContacto(); ?></td>
+                                <td><?php echo $invitado->getNombre(); ?></td>
+                                <td><?php echo $invitado->getCelular(); ?></td>
+                                <td>http://palermonights.com/eventos/<?php echo $this->evento->getNombre(); ?></td>
+                            </tr>
+
+
+
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
+                </table>

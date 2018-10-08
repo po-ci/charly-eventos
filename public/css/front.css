@@ -1,0 +1,418 @@
+/* Móviles en horizontal o tablets en vertical -------------------------------------------------- */
+@media (min-width: 200px) {
+
+.e_photos{height:60px ! important;}
+.marginOnxs{
+    margin-top: 10px;
+}
+}
+
+@media (min-width: 500px) {
+    .container {
+        max-width: 480px;
+    }
+
+    .e_cover .img-responsive{
+        min-height: 150px;
+    }
+    
+    .e_photos{height:80px ! important;}
+
+.marginOnxs{
+    margin-top: 10px;
+}
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .e_cover .img-responsive{
+        min-height: 150px;
+    }
+    
+    .marginOnxs{
+    margin-top: 0px;
+}
+
+
+}
+
+@media (min-width: 800px) {
+    .container {
+        max-width: 780px;
+    }
+
+    .e_cover .img-responsive{
+        min-height: 150px;
+    }
+ .e_photos{height:90px ! important;}
+
+}
+
+/*Tablets en horizonal y escritorios normales -------------------------------------------------- */
+@media (min-width: 1024px) { 
+    .container {
+        max-width: 1000px;
+    }
+
+    .row-no-padding {
+        [class*="col-"] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+  .e_photos{height:100px ! important;}
+
+    .col-no-padding-left {
+        padding-left: 0 !important;
+    }
+
+    .col-no-padding-right{
+        padding-right: 0 !important;
+
+    }
+ .e_photos{height:100px ! important;}
+    
+}
+
+/* Escritorios muy anchos -------------------------------------------------- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+    
+    .e_photos{height:100px ! important;}
+
+    .row-no-padding {
+        [class*="col-"] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+
+
+
+    .col-no-padding-left {
+        padding-left: 0 !important;
+    }
+
+    .col-no-padding-right{
+        padding-right: 0 !important;
+    }
+
+}
+
+img.img-responsive { display: table-cell; max-width: 100%; }
+
+
+
+.container{
+    background:  #E5E5E5;
+    border: 1px solid #f1f1f1;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+
+
+.bar{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9fcf7+0,f5f9f0+100;L+Green+3D */
+    background: rgb(249,252,247); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(249,252,247,1) 0%, rgba(245,249,240,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,252,247,1)), color-stop(100%,rgba(245,249,240,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 ); /* IE6-9 */
+
+    top:0;
+    position: absolute;
+    border-bottom: #dddddd solid 1px;
+    margin-bottom: 13px;
+    height: 50px;
+    width: 100%;
+}
+
+
+
+
+.simple {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.e_header{height: auto;
+          overflow: hidden;
+          background: #f1f1f1;}
+.e_cover{padding: 0;}
+.e_photos{height:80px;}
+
+.e_photos .img-responsive{
+    min-height: 80px;
+}
+.e_izq{padding: 0px 0px 3px 0px; 
+       background: #f1f1f1;
+}
+
+.e_der{
+    // color: #1c2d3f;
+    color: #fff;
+    background: #f1f1f1;
+    font-weight:300;
+    display: block;
+    position: relative;
+    z-index: 1;
+    /*    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);*/
+
+}
+
+
+
+
+
+.formato{
+    //  color: #1c2d3f;
+    color: #555;
+    font-weight: 400;
+    font-family: Roboto,arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+
+    /*    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);*/
+
+}
+
+.formato::afte{
+    content: "";
+    background: url(/img/b4_1.jpg) ! important;
+    background-repeat: no-repeat;   
+    background-size: 100% 100%;  
+    background-origin: content-box; 
+    background-position: center center;
+    // opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+}
+
+
+
+
+
+
+.e_birthday{
+    height:250px; 
+}
+
+.transparent{
+    background: transparent;
+}
+
+
+.img-responsive {
+    max-height: calc(100vh - 225px);
+    margin: 0 auto;
+}
+
+.cname{
+    color: #3f5d9c;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.cnameInvitado{
+    color: #68B604;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.htitle {
+    font-family: 'nexa_boldregular';
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #3c763d;
+    text-shadow: 1px 1px 1px #398439;
+}
+
+.cdireccion{
+    color: #777;
+
+}
+
+.cfecha{
+    //color:rgb(68, 74, 71);
+    color: #fff;
+    margin-top: 10px;
+}
+.cprofile{
+    margin: 5px;
+    min-width: 80%;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.box-1 {
+    background: #f1f1f1;
+    -webkit-box-shadow: 1px 2px 5px 1px  #777;
+    -moz-box-shadow: 1px 2px 5px 1px  #777;
+    box-shadow: 1px 2px 5px 1px  #777;
+}
+
+.box-2 {
+    background: #fff;
+
+    -webkit-box-shadow: 0px 1px 2px 1px  #AAA;
+    -moz-box-shadow: 0px 1px 2px 1px  #AAA;
+    box-shadow: 0px 1px 2px 1px  #AAA;
+}
+
+.marginButtom10{
+    margin-bottom: 10px;
+}
+
+#wrapper{
+    background-color: #777;
+}
+
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.nomargin {
+    margin: 0 !important;
+}
+
+.padding5 {
+    padding: 5px !important;
+}
+
+.margin5 {
+    padding: 5px !important;
+}
+
+
+
+.padding2 {
+    padding: 2px !important;
+}
+
+.margin2 {
+    padding: 2px !important;
+}
+
+.marginTop3{
+    margin-top: 3px;
+}
+.iconType{
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+.marginTop5{
+    margin-top: 10px;
+}
+.marginTop10{
+    margin-top: 10px;
+}
+
+.marginTop30{
+    margin-top: 30px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.bface{
+    padding-top: 25px;
+    padding-bottom: 3px;
+}
+
+.btn-facebook, .btn-facebook:hover,.btn-facebook:active,.btn-facebook:enabled{
+    background: #3f5d9c;
+    color: #fff;
+    text-transform: none;
+    font-size: 14px!important;
+    font-weight: 300;
+    /*    font-family: arial;*/
+}
+
+.efooter{
+    height: 3px;
+    background: rgb(249,252,247); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(249,252,247,1) 0%, rgba(245,249,240,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,252,247,1)), color-stop(100%,rgba(245,249,240,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9fcf7', endColorstr='#f5f9f0',GradientType=0 ); /* IE6-9 */
+
+    margin-top: 25px;
+}
+
+
+.abajoDerecha{
+    position:absolute;
+    bottom: 1%;
+}
+
+.flyer-title {
+    font-size: 20pt;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 5%;
+
+    font-family: 'nexa_boldregular';
+}
+
+
+//Tricks
+.overflow{
+    overflow: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
+.btn-facebook-p {
+    background: url(/img/f_button.png)10px 50% no-repeat #3f5d9c;
+    color: #fff;
+    padding: 10px 30px;
+    text-transform: none;
+    font-size: 14px!important;
+    font-weight: 300;
+    font-family: Arial ! important;
+
+}
+
+.btn-facebook-p:hover {
+    background: url(/img/f_button.png)10px 50% no-repeat #314878;
+    color: #fff;
+}

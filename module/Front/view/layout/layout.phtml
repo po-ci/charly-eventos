@@ -1,0 +1,73 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Eventos'); ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->partial('layout/css'); ?>
+
+
+        <!-- Scripts -->
+        <?php echo $this->partial('layout/js'); ?>
+
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div class="bar">
+               
+            </div>
+
+            <div id="container" class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <?php echo $this->layout()->content; ?>
+                    </div>
+
+                    <div class='modal fade' id='cdiModal'>
+                        <div class='modal-dialog modal-lg'>
+                            <div class='modal-content'>
+                                <div class='modal-header'>
+                                    <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+                                    <h4 class='modal-title'><div id='cdiTitle'>-</div></h4>
+                                </div>
+                                <div class='modal-body'>
+                                    <div id='cdiAjaxContent'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='modal fade' id='loaderModal'>
+
+
+                        <div class='modal-dialog modal-lg'>
+                            <div class='modal-content'>
+
+                                <div class='modal-body'>
+                                    <i class='fa fa-cog fa-spin'></i><span> Actualizando... Por favor espere.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" clearfix"></div>
+            <div  class="efooter">
+
+            </div>
+        </div>
+    </body>
+
+</html>
+

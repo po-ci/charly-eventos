@@ -1,0 +1,342 @@
+<?php if ($this->persist === true): ?>
+    <div class="alert alert-success">
+        Se guardo su solicitud correctamente!
+    </div>
+<?php endif; ?>
+<?php if ($this->persist === false): ?>
+    <div class="alert alert-danger">
+        Error en el formulario!
+    </div>
+
+<?php endif; ?>
+
+<div class="row">
+    <?php
+    $this->form->prepare();
+    echo $this->form()->openTag($this->form);
+    ?>
+
+
+    <!--Imprimo el ID-->
+    <?php
+    $element = $this->form->get("id");
+    ?>
+    <?php echo $this->formElement($element); ?>
+    
+       <!--Imprimo el remito-->
+    
+    
+    
+    
+    <?php
+    $element = $this->form->get("remito");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+            <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+    <!--Imprimo el Cliente-->
+    
+    
+    
+    
+    <?php
+    $element = $this->form->get("cliente");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+            <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+   
+
+    <!--Imprimo producto-->
+    <?php
+    $element = $this->form->get("producto");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+            <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+    
+     <!--Imprimo valor-->
+    <?php
+    $element = $this->form->get("valorUnitario");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+           <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>  
+     
+     
+    <!--Imprimo cantidad-->
+    <?php
+    $element = $this->form->get("cantidad");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+           <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+        </div>
+    </div>
+    
+      <?php
+    $element = $this->form->get("fechaVenta");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+           <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+
+    <!--Imprimo valorTotal-->
+    <?php
+    $element = $this->form->get("valorTotal");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+           <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>      
+
+    <hr>
+    <!--Imprimo cuotas-->
+    <?php
+    $element = $this->form->get("cantidadCuotas");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+           <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+    
+    
+     
+      <?php
+    $element = $this->form->get("fechaCuota");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+           <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+  
+  
+
+      <!--Imprimo observaciones-->
+    <?php
+    $element = $this->form->get("observaciones");
+    ?>
+
+    <div  class="form-group<?php if ($this->formElementErrors($element)) echo " has-error" ?>">
+        <label class="col-lg-3 control-label"><?php echo $element->getLabel() ?></label>
+        <div class="col-lg-7">
+            <?php echo $this->formElement($element); ?>
+
+            <?php if ($element->getOption('description')): ?>
+                <p class="help-block"><?php echo $element->getOption('description') ?></p>
+            <?php endif; ?>    
+            <?php if ($this->formElementErrors($element)) : ?>
+                <?php
+                // Imprimo los errores
+                echo $this->formElementErrors()
+                        ->setMessageOpenFormat('<span class="help-block">')
+                        ->setMessageSeparatorString('</span><span class="help-block">')
+                        ->setMessageCloseString('</span>')
+                        ->render($element);
+                ?>
+
+
+            <?php endif; ?>
+
+        </div>
+    </div>
+
+    <!--Imprimo el Submit-->
+    <?php
+    $element = $this->form->get("submit");
+    ?>
+    <?php echo $this->formElement($element); ?>
+
+    <?php
+    echo $this->form()->closeTag($form);
+    ?>
+
+
+</div>

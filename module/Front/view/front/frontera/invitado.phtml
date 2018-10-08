@@ -1,0 +1,19 @@
+<?php if ($this->persist): ?>
+
+
+
+
+    <?php if ($this->object): ?>
+        <tr id="t<?php echo $this->object->getId(); ?>">
+            <td><?php echo $this->object->getNombre(); ?></td>
+            <td><?php echo $this->object->getCelular(); ?></td>
+              <td><button class="btn btn-primary fa fa-trash" onclick="delInvitado(<?php echo $this->object->getId(); ?>)"></button></td>
+        </tr>
+    <?php endif; ?>
+<?php else: ?>
+
+    error
+
+<?php endif; ?>
+
+

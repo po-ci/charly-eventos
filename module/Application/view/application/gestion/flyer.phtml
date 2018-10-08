@@ -1,0 +1,33 @@
+
+<div class="row">
+    <div class="col-md-12 col-sm-12">
+
+        <div class="portlet portlet-default">
+
+            <div class="portlet-header">
+                <h4 class="portlet-title">
+                Flyers
+                </h4>
+
+
+            </div> <!-- /.portlet-header -->
+
+            <div class="portlet-body">    
+                <button class="btn fa fa-plus-circle" onclick="showModalFlyer()"> Agregar</button>
+
+                <?php echo $this->RenderCdiGrid($this->grid); ?>
+
+
+            </div> <!-- /.portlet-body -->
+
+        </div> <!-- /.portlet -->
+
+    </div>
+</div>
+
+<?php
+//Js especifico para el chaty
+$this->headScript()->appendFile($this->basePath() . '/js/module/app/gestion/flyer.js')
+        ->appendFile($this->basePath() . '/js/global.js')
+          ->appendFile($this->basePath() .'/js/jquery.form.js', 'text/javascript');
+?>

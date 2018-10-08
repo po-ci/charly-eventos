@@ -1,0 +1,21 @@
+               
+
+                <table class="table keyvalue-table table-hover">
+                    <tbody>
+
+                        <?php foreach ($this->entity->toArray() as $key => $value): ?>
+                            <tr>
+                                <th class="kv-key"> <?php echo $key; ?></th>
+
+
+                                <td class="kv-value"><?php echo $value; ?> </td>
+                            </tr>
+
+
+                        <?php endforeach; ?>
+
+
+                    </tbody>
+                </table>
+
+ 

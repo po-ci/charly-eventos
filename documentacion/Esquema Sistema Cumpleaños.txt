@@ -1,0 +1,70 @@
+Panel Sistema Cumpleaños
+
+Parte 1
+-------
+
+1.- Crear Lugar
+	
+	- Nombre del Lugar
+	- Direccion
+	- Dia - Hora
+	- Flyer Evento JPG
+	- Subir Fotos
+
+	
+	
+
+2.- INFO Formato
+
+	- Texto HTML
+
+
+3.- Listado Eventos
+
+	- Exportar Listado Celulares por evento
+
+
+4.- Base Celulares chupar los datos de facebook
+
+
+
+Parte 2
+-------
+
+Nombre Cumpleaños	(Login con Facebook) (1)
+
+Dia
+
+Lugar  (2)
+
+Formato  (3)
+
+
+
+
+(4) Invitado	  Celular
+
+-----------	------------
+-----------	------------
+-----------	------------
+-----------	------------
+-----------	------------
+-----------	------------
+
+
+
+				Crear Evento
+
+(1) Toma Datos Base
+(2) Lugares establecidos en el sistema
+(3) Formatos establecidos en el sistema
+(4) Guarde Datos Base Celulares
+(5) Despliegue menu enviar por mail link del evento
+
+
+
+Parte 3
+-------
+
+
+Evento Creado (Ejemplo Imagen)

@@ -1,0 +1,87 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Eventos'); ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->partial('layout/css-svadmin2'); ?>
+
+
+        <!-- Scripts -->
+        <?php echo $this->partial('layout/js-svadmin2'); ?>
+
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+            <nav class="navbar navbar-default navbar-static-top nav-custom" role="navigation" style="margin-bottom: 0">
+
+                <div class="navbar-header ">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="
+                       "><span class="brand"><i class="fa fa-cubes"></i> Charly Ruez Eventos</span></a>
+
+
+
+                </div>
+                <?php echo $this->partial('layout/iconlogin', array('vr' => 'zf2')); ?>
+
+            </nav>
+
+            <?php echo $this->partial('layout/navbar', array('vr' => 'zf2')); ?>
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <?php echo $this->layout()->content; ?>
+                    </div>
+
+                    <div class='modal fade' id='cdiModal'>
+                        <div class='modal-dialog modal-lg'>
+                            <div class='modal-content'>
+                                <div class='modal-header'>
+                                    <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>
+                                    <h4 class='modal-title'><div id='cdiTitle'>-</div></h4>
+                                </div>
+                                <div class='modal-body'>
+                                    <div id='cdiAjaxContent'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='modal fade' id='loaderModal'>
+
+
+                        <div class='modal-dialog modal-lg'>
+                            <div class='modal-content'>
+
+                                <div class='modal-body'>
+                                    <i class='fa fa-cog fa-spin'></i><span> Actualizando... Por favor espere.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+

@@ -1,0 +1,89 @@
+<div id="status">
+    <div class="row">
+        <?php if ($this->persist): ?>
+            <div class="alert alert-success">
+                Se guardo correctamente!
+            </div>
+
+
+            <script></script>
+        <?php elseif ($this->persist === false): ?>
+            <div class="alert alert-danger">
+                Error: Verificar Formulario!
+            </div>
+
+        <?php endif; ?>
+
+
+                    <?php echo $this->partial('widget/fhonecol', array('form' => $this->form)); ?>
+
+
+                    <br> <br>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="progress progress-striped active">
+                                <div id="bar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="1" aria-valuemax="100" >
+
+                                </div>
+                            </div>
+                            <span id="percent" ></span>
+                        </div>
+                    </div>
+                    <br>
+                    <?php if ($picture): ?>
+                    <div style="text-align: center"; >
+                        <img src="<?php echo $picture; ?>" style="height: 100px; width: 100px; text-align: center;"/>
+                         </div>
+                    <?php endif; ?>
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+
+        var bar = $('#bar');
+        var percent = $('#percent');
+        var status = $('#status');
+
+        $('#LugarFoto').ajaxForm({
+            beforeSend: function () {
+                //status.empty();
+                var percentVal = '0%';
+                bar.width(percentVal);
+                percent.html(percentVal);
+
+            },
+            uploadProgress: function (event, position, total, percentComplete) {
+                var percentVal = percentComplete + '%';
+                bar.attr('aria-valuenow', percentComplete);
+                bar.width(percentVal);
+                percent.html(percentVal);
+
+            },
+            success: function () {
+
+
+
+            },
+            complete: function (xhr) {
+                var percentVal = '100%';
+                bar.width(percentVal)
+                percent.html("100% Aguarde...");
+                bar.removeClass("progress-bar-warning");
+                bar.addClass("progress-bar-success");
+                status.html(xhr.responseText);
+
+            }
+        });
+
+    })();
+
+
+    function refrescar()
+    {
+        window.location.reload();
+    }
+</script>

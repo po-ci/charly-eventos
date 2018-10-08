@@ -1,0 +1,12 @@
+tecnico;tecnico2;nroTicket;template;prioridad;direccion;nodo;cliente;suscripcion;nombreContacto;telContacto;evento;equipo;puerto;reiterado;ultimoMomento;fechaSolucion;estado
+;;39840696;"UNPYME - Mañana";;URUGUAY_390_11_A;"Parana 433";"PANIZZA NORBERTO CARLOS";669215;Francisco;1554203726;"Sin Conexion a Internet";-;-;;;;Pendiente
+;;39840971;"UNPYME - Mañana";;"AV CORRIENTES_980_6_D";"Roque Saenz Pena 971";"GUARAGNA ROMINA PAOLA";715800;Romina;52395080;Microcortes;"AD114000001-N-rsaenzpena971-9102-001	172";VDSL:2.18;;;;Pendiente
+;;39840769;"UNPYME - Mañana";;"DOMINGO FAUSTINO SARMIENTO_2546_PB";"Castelli 232";"RIZIAN BEDROS, ARIS MARIA MARGARITA Y OTRAS SRL";652254;Paola;49540107;"Mala calidad con ciertos destinos Locales [Local]";-;-;;;;Pendiente
+;;39840625;"UNPYME - Mañana";;"AV BERNARDINO RIVADAVIA_2352";"Rivadavia 2401";"ADMINISTRACION AQUILINO C. COLOMBO S.A.";85517;claudiapilo;49517747;Microcortes;-;-;1;;;Pendiente
+;;39841990;"UNGE - Mañana";;"AV ING HUERGO_969_PB";"Belgrano 748 (HUB)";"ED GAR SOCIEDAD ANONIMA";827907;"Juan Labonia";"15 5772 8515";"[G] Solicitud de configuracion de aparato telefonico";.;.;;;;Pendiente
+;;39841722;"UNPYME - Mañana";;TALCAHUANO_446_5_B;"Talcahuano 446";"BIBINI NICOLAS PEDRO";165769;mariana;1559565746;"No puede emitir ni recibir llamadas [TI]";-;-;;;;Pendiente
+;;39841818;"UNGE - Mañana";;PARANA_370;"Parana 433";"BANCO ITAU BUEN AYRE SA";360061;Itau;43205513;"Sin Tono";-;-;;;;Pendiente
+;;39835806;"UNPYME - Mañana";;TALCAHUANO_638_5_F;"Uruguay 651";"AMERICANA TURISMO SA";357997;Mariana;50316903;"No registra uno o varios internos [CV]";-;-;;;;Pendiente
+;;39842690;"UNPYME - Mañana";;"GRAL JUAN LAVALLE_2275_PB";"Uriburu 626 (Concentrador)";"CUBAS RODRIGO ELMO";552929;Carin;49517520;Microcortes;172.17.113.121;0/5;;;;Pendiente
+;;39836027;"UNGE - Mañana";;"Alto Palermo";"Carlos Pellegrini 1185";"LESAMI S.A.";851538;Martin;1151993909;"No puede emitir ni recibir llamadas [CV]";SPA122;.;1;;;Pendiente
+;;39842381;"UNGE - Tarde";;"AV CALLAO_25_2";"Rodriguez Pena 36";"CENTRALAB S.A.";81295;"Daniel Flores";32205050;"Trama Caida";172.16.198.124;"E1 5/3";;;;Pendiente

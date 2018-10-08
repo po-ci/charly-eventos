@@ -1,0 +1,17 @@
+<div class="container-fluid">
+<?php if (!$this->post): ?>
+
+      <?php echo $this->partial('widget/fhonecol', array('form' => $this->form)); ?>
+
+  
+<?php else: ?>
+    <?php if ($this->persist): ?>
+        <div class="alert alert-success"> Se envio la consulta con Exito.</div>
+    <?php else: ?>
+
+        <div class="alert alert-danger"> Error al procesar la consutla</div>
+ <?php echo $this->partial('widget/fhonecol', array('form' => $this->form)); ?>
+    <?php endif; ?>
+
+<?php endif; ?>
+</div>
